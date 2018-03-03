@@ -26,7 +26,7 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 currentOffset = transform.position - goPosition;
 
-        //float angle = Vector3.Angle(currentOffset, defaultOffset);
+        float angle = Vector3.Angle(currentOffset, defaultOffset);
 
         //transform.position = Vector3.MoveTowards(currentOffset, defaultOffset, 50f);
 
@@ -41,8 +41,8 @@ public class CameraFollow : MonoBehaviour
 
         //Quaternion lerped = Quaternion.Lerp(fromRotation, toRotation, (angle / maxAngle) * Time.deltaTime);
 
-        //Vector3 lerped2 = Vector3.Lerp(currentOffset, defaultOffset, (angle / maxAngle));
+        //Vector3 lerped2 = Vector3.Lerp(currentOffset, defaultOffset, Mathf.Clamp(angle, 0f, maxAngle) * Time.deltaTime);
 
-        //transform.position = lerped2;
+        //transform.position = goPosition + lerped2;
     }
 }

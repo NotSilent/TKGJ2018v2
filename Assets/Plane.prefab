@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4298981048506036}
   - component: {fileID: 33564033947813030}
   - component: {fileID: 23310510961378888}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4906734053424894}
   - component: {fileID: 33477913718560096}
   - component: {fileID: 23031728063138028}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane 3d models
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114920752785678130}
   - component: {fileID: 114647633022535424}
   - component: {fileID: 135622472923359136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4477639434710026}
   - component: {fileID: 33064193874136646}
   - component: {fileID: 23208499960877476}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: B3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4415581603834210}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GunPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4016388388852084}
   - component: {fileID: 33986988740464160}
   - component: {fileID: 23295296696678656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4824353692995428}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c477c2f048f574f45818837afa317fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 786fa4acb1ffc854ea0bca1aa33f1bdc, type: 2}
+  weapon: {fileID: 11400000, guid: 32f7f1c6282e00b4e8b0f41aa4d09137, type: 2}
   gunPosition: {fileID: 1674203393892010}
   speed: 5
 --- !u!135 &135622472923359136

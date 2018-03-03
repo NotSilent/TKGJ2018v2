@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 543766414f01d88409c6a95deef6953c, type: 3}
-  m_Name: Basic
+  m_Name: BasicEnemyWeapon
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1381094123037328, guid: 70c64266eb837644099fa53896e28a0d,
+  projectilePrefab: {fileID: 1381094123037328, guid: 53776a1a4d6d3c94f82a8db6fd9e0a54,
     type: 2}
   bullets: 1
-  cooldown: 0.2
+  cooldown: 1
