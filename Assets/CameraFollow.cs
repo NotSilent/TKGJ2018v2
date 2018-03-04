@@ -27,11 +27,11 @@ public class CameraFollow : MonoBehaviour
 
     IEnumerator shaking;
     float force;
-    public void StartShaking(float force)
+    public void StartShaking(float time, float force)
     {
         this.force = force;
         StopAllCoroutines();
-        StartCoroutine(Shake(1f));
+        StartCoroutine(Shake(time));
     }
 
     private void Start()

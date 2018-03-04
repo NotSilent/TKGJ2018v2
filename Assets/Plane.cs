@@ -40,6 +40,6 @@ public class Plane : Vehicle
 
     void ScreenShake()
     {
-        FindObjectOfType<CameraFollow>().StartShaking(1f);
+        FindObjectOfType<CameraFollow>().StartShaking(2.5f, 0.5f);
     }
 }

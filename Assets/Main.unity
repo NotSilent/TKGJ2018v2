@@ -30,7 +30,7 @@ RenderSettings:
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
-  m_HaloTexture: {fileID: 0}
+  m_HaloTexture: {fileID: 2800000, guid: 42183971d24cfe443a346e7ec6e83bbb, type: 3}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
@@ -330,20 +330,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 65458188939531742, guid: 9e3ca42062fc12d42950638b5aad58d9,
+    - target: {fileID: 114069624573350330, guid: 9e3ca42062fc12d42950638b5aad58d9,
         type: 2}
-      propertyPath: m_Size.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65458188939531742, guid: 9e3ca42062fc12d42950638b5aad58d9,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65458188939531742, guid: 9e3ca42062fc12d42950638b5aad58d9,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 0.5
+      propertyPath: health
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e3ca42062fc12d42950638b5aad58d9, type: 2}

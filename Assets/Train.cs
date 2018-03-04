@@ -34,6 +34,6 @@ public class Train : Vehicle
 
     void ScreenShake()
     {
-        FindObjectOfType<CameraFollow>().StartShaking(2.5f);
+        FindObjectOfType<CameraFollow>().StartShaking(0.5f, 5f);
     }
 }

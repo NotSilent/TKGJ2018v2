@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1381094123037328, guid: 53776a1a4d6d3c94f82a8db6fd9e0a54,
     type: 2}
-  bullets: 1
+  bullets: 3
   cooldown: 1

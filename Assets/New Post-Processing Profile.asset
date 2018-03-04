@@ -25,9 +25,9 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      excludeSkybox: 1
+      excludeSkybox: 0
   antialiasing:
     m_Enabled: 1
     m_Settings:
@@ -42,8 +42,8 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 0
     m_Settings:
-      intensity: 1
-      radius: 0.3
+      intensity: 3.34
+      radius: 72.6
       sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       reflection:
-        blendType: 0
+        blendType: 1
         reflectionQuality: 0
         maxDistance: 100
         iterationCount: 588
@@ -62,57 +62,57 @@ MonoBehaviour:
         reflectionBlur: 3.69
         reflectBackfaces: 1
       intensity:
-        reflectionMultiplier: 1.209
+        reflectionMultiplier: 2
         fadeDistance: 384
         fresnelFade: 0.457
         fresnelFadePower: 4.95
       screenEdgeMask:
-        intensity: 0.462
+        intensity: 0.992
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 18
+      focusDistance: 24.3
       aperture: 0.8
       focalLength: 50
-      useCameraFov: 0
+      useCameraFov: 1
       kernelSize: 1
   motionBlur:
     m_Enabled: 0
     m_Settings:
-      shutterAngle: 350
-      sampleCount: 27
-      frameBlending: 0.331
+      shutterAngle: 104
+      sampleCount: 10
+      frameBlending: 0.01
   eyeAdaptation:
     m_Enabled: 1
     m_Settings:
-      lowPercent: 48.99997
+      lowPercent: 48.99993
       highPercent: 99
       minLuminance: -3.82
       maxLuminance: 10.23
-      keyValue: 0.09
-      dynamicKeyValue: 0
+      keyValue: 0.075
+      dynamicKeyValue: 1
       adaptationType: 0
-      speedUp: 0.03
-      speedDown: 7.2
+      speedUp: 5.08
+      speedDown: 17.85
       logMin: -16
       logMax: 16
   bloom:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 1.31
+        intensity: 1.5
         threshold: 4.5
-        softKnee: 0.84
+        softKnee: 0.75
         radius: 7
         antiFlicker: 1
       lensDirt:
-        texture: {fileID: 0}
-        intensity: 3
+        texture: {fileID: 2800000, guid: 3666c4b38edb1f44e9743541e0984e42, type: 3}
+        intensity: 5
   colorGrading:
     m_Enabled: 0
     m_Settings:
       tonemapping:
-        tonemapper: 1
+        tonemapper: 0
         neutralBlackIn: 0.02
         neutralWhiteIn: 10
         neutralBlackOut: 0
@@ -120,12 +120,12 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 0
-        temperature: -45
-        tint: 100
-        hueShift: 62
+        postExposure: -0.75
+        temperature: -10
+        tint: -34
+        hueShift: -45
         saturation: 0.81
-        contrast: 0.84
+        contrast: 1.14
       channelMixer:
         red: {x: -0.42, y: 1.92, z: -0.52}
         green: {x: 0, y: 1, z: 0}
@@ -153,8 +153,8 @@ MonoBehaviour:
               outSlope: 1
               tangentMode: 0
             - serializedVersion: 2
-              time: 0.3855932
-              value: 0.49074072
+              time: 0.6148649
+              value: 0.3333333
               inSlope: 1
               outSlope: 1
               tangentMode: 0
@@ -284,13 +284,13 @@ MonoBehaviour:
   userLut:
     m_Enabled: 0
     m_Settings:
-      lut: {fileID: 0}
-      contribution: 0
+      lut: {fileID: 2800000, guid: 1431d2d30b052b9409b46f930ef74e5d, type: 3}
+      contribution: 1
   chromaticAberration:
     m_Enabled: 0
     m_Settings:
-      spectralTexture: {fileID: 0}
-      intensity: 0
+      spectralTexture: {fileID: 2800000, guid: 1431d2d30b052b9409b46f930ef74e5d, type: 3}
+      intensity: 1
   grain:
     m_Enabled: 0
     m_Settings:
@@ -303,13 +303,13 @@ MonoBehaviour:
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
-      center: {x: 0.5, y: 0.5}
-      intensity: 0.512
-      smoothness: 0.363
-      roundness: 1
+      center: {x: 0.5, y: 0.85}
+      intensity: 0.399
+      smoothness: 0.229
+      roundness: 0.97
       mask: {fileID: 0}
       opacity: 1
-      rounded: 0
+      rounded: 1
   dithering:
     m_Enabled: 0
   monitors:
