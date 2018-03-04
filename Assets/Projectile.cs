@@ -18,9 +18,9 @@ public class Projectile : MonoBehaviour
         StartCoroutine(DestroyAfter(5f));
     }
 
-    public void Init(Vector3 direction, Collider collider = null)
+    public void Init(Vector3 direction, float angle, Collider collider = null)
     {
-        this.direction = direction;
+        this.direction = Quaternion.AngleAxis(angle, Vector3.up) * direction;
         rb.angularVelocity = UnityEngine.Random.insideUnitSphere * 5f;
 
         if (collider)

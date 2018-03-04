@@ -26,7 +26,7 @@ public class Plane : Vehicle
         CurrentCooldown += Time.deltaTime;
         if (CurrentCooldown > CurrentWeapon.Cooldown)
         {
-            CurrentWeapon.SpawnBullet(GunPosition, transform.forward, GetComponent<Collider>());
+            CurrentWeapon.SpawnBullets(GunPosition, transform.forward, GetComponent<Collider>());
             CurrentCooldown = 0f;
         }
     }

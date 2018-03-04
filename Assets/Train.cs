@@ -10,7 +10,7 @@ public class Train : Vehicle
         CurrentCooldown += Time.deltaTime;
         if (Input.GetKey(KeyCode.Space) && CurrentCooldown > CurrentWeapon.Cooldown)
         {
-            CurrentWeapon.SpawnBullet(GunPosition, transform.forward, GetComponent<Collider>());
+            CurrentWeapon.SpawnBullets(GunPosition, transform.forward, GetComponent<Collider>());
             CurrentCooldown = 0f;
         }
     }

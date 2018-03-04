@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,9 +17,23 @@ public class Weapon : ScriptableObject
         get { return cooldown; }
     }
 
-    public void SpawnBullet(Vector3 position, Vector3 direction, Collider collider = null)
+    public void SpawnBullets(Vector3 position, Vector3 direction, Collider collider = null)
     {
-        GameObject projectileGO = Instantiate(projectilePrefab, position, Quaternion.identity);
-        projectileGO.GetComponent<Projectile>()?.Init(direction, collider);
+        if (bullets == 1)
+        {
+            GameObject projectileGO = Instantiate(projectilePrefab, position, Quaternion.identity);
+            projectileGO.GetComponent<Projectile>()?.Init(direction, 0f, collider);
+        }
+        else
+        {
+            float angle = (bullets - 1) * 30f;
+            for (int i = 0; i < bullets; i++)
+            {
+                float frac = angle / (bullets - 1);
+                float currAngle = frac * i - angle / 2;
+                GameObject projectileGO = Instantiate(projectilePrefab, position, Quaternion.identity);
+                projectileGO.GetComponent<Projectile>()?.Init(direction, currAngle, collider);
+            }
+        }
     }
 }
