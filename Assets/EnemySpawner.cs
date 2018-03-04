@@ -8,6 +8,9 @@ public class EnemySpawner : MonoBehaviour
     GameObject enemyGO;
 
     [SerializeField]
+    GameObject explosion;
+
+    [SerializeField]
     float timeBetweenSpawns;
 
     float currentTimeBetweenSpawns;
@@ -35,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
     private void Update()
     {
         currentTimeBetweenSpawns += Time.deltaTime;
-        if(currentTimeBetweenSpawns > timeBetweenSpawns && CanSpawnMoreEnemies)
+        if (currentTimeBetweenSpawns > timeBetweenSpawns && CanSpawnMoreEnemies)
         {
             SpawnEnemy();
             currentTimeBetweenSpawns = 0f;
@@ -44,29 +47,25 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Vector3 rand = Random.insideUnitSphere * 30f;
-        rand.y = 0f;
-        GameObject enemySpawnedGO = Instantiate(enemyGO, transform.position + rand, Quaternion.identity, transform);
+        GameObject enemySpawnedGO = Instantiate(enemyGO, transform.position
+            + Vector3.forward * Random.Range(-1, 2) * 15f +
+            Vector3.right * 60f * ((Random.Range(0f, 1f) > 0.5f) ? 1f : -1f),
+            Quaternion.identity, transform);
         enemySpawnedGO.transform.Rotate(Vector3.up, 180);
-        enemySpawnedGO.GetComponent<Health>().onDied += () => OnEnemyDied();
+        enemySpawnedGO.GetComponent<Health>().onDied += (Vector3 position) => OnEnemyDied(position);
         currentEnemyCount++;
     }
 
-    void OnEnemyDied()
+    void OnEnemyDied(Vector3 position)
     {
         currentEnemyCount--;
         currentLevelEnemiesDead++;
-        if(currentLevelEnemiesDead >= enemiesToNextLevel)
+        if (currentLevelEnemiesDead >= enemiesToNextLevel)
         {
             enemiesToNextLevel = maxEnemyCount++;
             currentLevelEnemiesDead = 0;
         }
         score++;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 5f);
+        Instantiate(explosion, position, Quaternion.identity).GetComponent<ParticleSystem>().Play();
     }
 }

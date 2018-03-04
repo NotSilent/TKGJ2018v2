@@ -14,4 +14,4 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1381094123037328, guid: 70c64266eb837644099fa53896e28a0d,
     type: 2}
   bullets: 1
-  cooldown: 0.2
+  cooldown: 1

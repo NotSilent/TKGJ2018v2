@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6772a609511ffd94f84e68bea3fcbe81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 50
 --- !u!135 &135859598399136610
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1050,11 +1050,11 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e85eb28aa2cb7014691af896786d8165, type: 3}
-  - {fileID: 2100002, guid: e85eb28aa2cb7014691af896786d8165, type: 3}
-  - {fileID: 2100004, guid: e85eb28aa2cb7014691af896786d8165, type: 3}
-  - {fileID: 2100006, guid: e85eb28aa2cb7014691af896786d8165, type: 3}
-  - {fileID: 2100008, guid: e85eb28aa2cb7014691af896786d8165, type: 3}
+  - {fileID: 2100000, guid: f38d6753e0bfe574f9f8e6d28d00c40d, type: 2}
+  - {fileID: 2100000, guid: 7459189aef65ebf419272c1f3480c627, type: 2}
+  - {fileID: 2100000, guid: 3ea8dcf731de1644f8de26d74c6df0d7, type: 2}
+  - {fileID: 2100000, guid: 47812621ddee09243ba73ba4258a5344, type: 2}
+  - {fileID: 2100000, guid: 988ab36be3bd9ba4791851bf073a2547, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

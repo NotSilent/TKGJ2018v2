@@ -17,11 +17,12 @@ public class Train : Vehicle
 
     private void Start()
     {
-        GetComponent<Health>().onDied += () =>
+        GetComponent<Health>().onDied += (position) =>
         {
             PlayerPrefs.SetString("score", GetComponentInChildren<EnemySpawner>().score.ToString());
             SceneManager.LoadScene("End");
         };
+        GetComponent<Health>().onDamageTaken += () => ScreenShake();
     }
 
     protected override void Move()
@@ -29,5 +30,10 @@ public class Train : Vehicle
         float horizontal = Input.GetAxis("Horizontal");
 
         Velocity = horizontal * Speed;
+    }
+
+    void ScreenShake()
+    {
+        FindObjectOfType<CameraFollow>().StartShaking(2.5f);
     }
 }

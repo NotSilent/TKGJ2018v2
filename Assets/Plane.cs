@@ -18,7 +18,7 @@ public class Plane : Vehicle
 
     private void Start()
     {
-        GetComponent<Health>().onDied += () => OnPlayerDied();
+        GetComponent<Health>().onDamageTaken += () => ScreenShake();
     }
 
     private void Update()
@@ -33,13 +33,13 @@ public class Plane : Vehicle
 
     protected override void Move()
     {
-        float distance = Mathf.Abs(transform.position.x - PlayerTrain.transform.position.x);
+        float distance = Mathf.Clamp(Mathf.Abs(transform.position.x - PlayerTrain.transform.position.x), 0f, 1f);
         float horizontal = transform.position.x > PlayerTrain.transform.position.x ? distance : -distance;
         Velocity = horizontal * Speed;
     }
 
-    private void OnPlayerDied()
+    void ScreenShake()
     {
-        SceneManager.LoadScene("End");
+        FindObjectOfType<CameraFollow>().StartShaking(1f);
     }
 }

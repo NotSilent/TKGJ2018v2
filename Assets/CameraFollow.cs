@@ -12,10 +12,27 @@ public class CameraFollow : MonoBehaviour
 
     Vector3 goPosition
     {
-        get { return goToFollow? goToFollow.transform.position : transform.position + defaultOffset; }
+        get { return goToFollow ? goToFollow.transform.position : transform.position + defaultOffset; }
     }
 
     Vector3 defaultOffset;
+
+    bool isShaking;
+    IEnumerator Shake(float time)
+    {
+        isShaking = true;
+        yield return new WaitForSeconds(time);
+        isShaking = false;
+    }
+
+    IEnumerator shaking;
+    float force;
+    public void StartShaking(float force)
+    {
+        this.force = force;
+        StopAllCoroutines();
+        StartCoroutine(Shake(1f));
+    }
 
     private void Start()
     {
@@ -24,25 +41,16 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 currentOffset = transform.position - goPosition;
+        EasyFollow();
+        if (isShaking)
+        {
+            Vector2 rand = Random.insideUnitCircle * force;
+            transform.localPosition += new Vector3(rand.x, rand.y, 0f);
+        }
+    }
 
-        float angle = Vector3.Angle(currentOffset, defaultOffset);
-
-        //transform.position = Vector3.MoveTowards(currentOffset, defaultOffset, 50f);
-
-        //transform.position = goToFollow.transform.position + defaultOffset;
-
-        Quaternion fromToRotation = Quaternion.FromToRotation(currentOffset, defaultOffset);
-        transform.position = goPosition + (fromToRotation * currentOffset);
-
-        //Quaternion toRotation = Quaternion.LookRotation(defaultOffset);
-        //Quaternion fromRotation = Quaternion.LookRotation(currentOffset);
-        //float angle = Quaternion.Angle(fromRotation, toRotation);
-
-        //Quaternion lerped = Quaternion.Lerp(fromRotation, toRotation, (angle / maxAngle) * Time.deltaTime);
-
-        //Vector3 lerped2 = Vector3.Lerp(currentOffset, defaultOffset, Mathf.Clamp(angle, 0f, maxAngle) * Time.deltaTime);
-
-        //transform.position = goPosition + lerped2;
+    private void EasyFollow()
+    {
+        transform.position = goPosition + defaultOffset;
     }
 }

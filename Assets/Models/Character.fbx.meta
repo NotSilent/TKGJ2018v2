@@ -79,7 +79,32 @@ ModelImporter:
     7400002: Armature|Walk
     9500000: //RootNode
     13700000: Body
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: 988ab36be3bd9ba4791851bf073a2547, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: f38d6753e0bfe574f9f8e6d28d00c40d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoes
+    second: {fileID: 2100000, guid: 3ea8dcf731de1644f8de26d74c6df0d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 47812621ddee09243ba73ba4258a5344, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trousers
+    second: {fileID: 2100000, guid: 7459189aef65ebf419272c1f3480c627, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
